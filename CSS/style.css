@@ -4,7 +4,7 @@
     --pharagraph-font-weight: 400;
     --pharagraph-font-size: 14px;
     --heading-font-weight: 700;
-    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1).
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -123,21 +123,27 @@ nav a{
     fill: rgba(117, 117, 117, 1);
 }
 
-.nav-item5:hover svg {
-    fill: #2196F3;
-}
-
-.nav-item5:hover a {
-    color: #2196F3;
-}
-
 .nav-item4:hover svg {
     fill: #2196F3;
+    transition: fill var(--transition);
 }
 
 .nav-item4:hover a {
     color: #2196F3;
+    transition: color var(--transition);
 }
+
+.nav-item5:hover svg {
+    fill: #2196F3;
+    transition: fill var(--transition);
+}
+
+.nav-item5:hover a {
+    color: #2196F3;
+    transition: color var(--transition);
+}
+
+
 
 .web-word {
     color: #2196F3;
@@ -186,7 +192,7 @@ main h1 {
     color: #fff;
     text-align: center;
     border-radius: 4px;
-    box-shadow: 0 4 4 0 #000000 15%;
+    box-shadow: 0 4 4 0 rgba(0, 0, 0, 0.15);
 }
 
 .main-button:hover {
@@ -238,13 +244,11 @@ main h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color var(--transition), fill var(--transition), color var(--transition);
 }
 
 .container-for-svgs:hover svg {
     background-color:#2196F3;
     fill: #FFF;
-    
 }
 
 .container-for-svgs:hover {
@@ -258,9 +262,8 @@ main h1 {
     width: 206px;
     height: 44px;
     color: #fff;
+    gap: 10px
 }
-
-
 
 .customers svg {
     width: 64px;
@@ -280,6 +283,7 @@ main h1 {
 
 .customers-svgs:hover svg {
     fill: #2196F3;
+    transition: fill var(--transition);
 }
 
 .customers {
@@ -561,6 +565,7 @@ footer p {
 
     .container-for-footer-svgs:hover  {
         background-color: #2196F3;
+        transition: background-color var(--transition);
     }
 
 
@@ -590,7 +595,7 @@ footer p {
     .main-div li:hover {
         box-shadow: 1px 4px 6px 0px #00000029;
         cursor: pointer;
-        transition: box-shadow var(--transition);
+        transition: box-shadow 250ms linear;
     }
 
     .main-div {
@@ -619,6 +624,7 @@ footer p {
     .portofolio button:hover {
         background-color: #2196F3 ;
         color: #FFF;
+        transition: background-color var(--transition), color var(--transition);
     }
 
     .button1 {
@@ -666,7 +672,7 @@ footer p {
     .relative-position-card:hover .card-description {
         display: block;
         background-color:rgba(33, 150, 243, 0.9) ;
-        animation: slide-out 250ms ease-in-out;
+        animation: slide-out 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .card-description {
